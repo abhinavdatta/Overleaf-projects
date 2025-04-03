@@ -4,18 +4,17 @@
 \usepackage{geometry}
 \geometry{a4paper, margin=1in}
 
-\usepackage{eso-pic}
+%\usepackage{eso-pic}
 
 % Add logo to every page
-\AddToShipoutPictureBG{%
-  \AtPageLowerRight{%
-    \hspace{1cm}%  Horizontal offset from right edge
-    \raisebox{1cm}{%  Vertical offset from bottom edge
-      \includegraphics[width=1.2cm]{SAHE.PNG}%  Adjust width as needed
-    }%
-  }%
-}
-
+%\AddToShipoutPictureBG{%
+ % \AtPageLowerRight{%
+  %  \hspace{1cm}%  Horizontal offset from right edge
+   % \raisebox{1cm}{%  Vertical offset from bottom edge
+    %  \includegraphics[width=1.2cm]{SAHE.PNG}%  Adjust width as needed
+    %}%
+  %}%
+%}
 
 \begin{figure}[h!]
     \centering
@@ -25,14 +24,26 @@
 \end{figure}
 
 
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+
+% Configure header with line
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyhead[L]{\footnotesize Design Thinking Project} % Top-left text
+\fancyhead[R]{\includegraphics[height=1cm]{SAHE.PNG}} % Top-right logo
+\renewcommand{\headrulewidth}{0.7pt} % Add horizontal line (adjust thickness as needed)
+\renewcommand{\headrule}{\hrule width\headwidth height\headrulewidth \vskip-\headrulewidth} % Line style
+
+
 \title{Low-Cost Water Filter Straw to Purify Water}
 % \author{Project by -Abhinav Datta,Lokesh,Rupak Sai,Poorna Venkata Siva Rao,Sujan Rao}
 
 %Roll-Numbers:-217,200,203,259,215
 
 % source available on :-
-%https://github.com/abhinavdatta/LowCostWaterFilter-LaTeX-
-% \date{\today}
+%https://github.com/abhinavdatta/Overleaf-projects
+
 
 \begin{document}
 
@@ -45,6 +56,7 @@ This project addresses the global challenge of unsafe drinking water by developi
 
 \newpage
 % This is Question-1
+
 \section{Understanding the Problem of Unsafe Drinking Water}
 
 \vspace{0.5cm} % Adds vertical space
